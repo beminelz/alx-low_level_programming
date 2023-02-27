@@ -3,27 +3,28 @@
 /**
  * print_diagonal - draws a diagonal line on the terminal
  * @n:  number of times the character \ shouldbe printed
+ * Return: Empty
  */
 
 void print_diagonal(int n)
 {
-		int i, j;
+	int x, y;
 
-		if (n > 0)
-		{
-		for (j = 0; j <= n; j++)
-		{
-		for (i = 0; i <= j; i++)
-		{
-		_putchar(' ');
-		}
-		_putchar('\\');
-		if (j == n - 1)
-		{
-		continue;
-		}
+	if (n <= 0)
+	{
 		_putchar('\n');
+	}
+	else
+	{
+		for (x = 0; x < n; x++)
+		{
+			for (y = 0; y < x; y++)
+			{
+				_putchar(32);
+			}
+
+			_putchar(92);
+			_putchar('\n');
 		}
-		}
-		_putchar('\n');
+	}
 }
